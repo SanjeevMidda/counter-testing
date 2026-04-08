@@ -12,8 +12,15 @@ function App() {
   const [counter, setCounter] = useState(0);
 
   const increase = () => setCounter(counter + 1);
-  const decrease = () => setCounter(counter - 1);
   const reset = () => setCounter(0);
+
+  const decrease = () => {
+    if (counter === 0) {
+      setCounter(0);
+    } else {
+      setCounter(counter - 1);
+    }
+  };
 
   return (
     <div className="App">
