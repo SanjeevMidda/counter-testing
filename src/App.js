@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./App.css";
 
 // create a counter app
 // should include functionalities to increase, decrease and reset
@@ -18,10 +17,11 @@ function App() {
 
   return (
     <div className="App">
-      <button oncClick={increase()}>+</button>
+      <button onClick={increase}>+</button>
 
-      <button oncClick={decrease()}>-</button>
-      <button oncClick={reset()}>+</button>
+      <button onClick={decrease}>-</button>
+
+      <button onClick={reset}>R</button>
       <h1>{counter}</h1>
     </div>
   );
