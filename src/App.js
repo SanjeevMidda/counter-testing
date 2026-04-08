@@ -16,7 +16,15 @@ function App() {
   const decrease = () => setCounter(counter - 1);
   const reset = () => setCounter(0);
 
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <button oncClick={increase()}>+</button>
+
+      <button oncClick={decrease()}>-</button>
+      <button oncClick={reset()}>+</button>
+      <h1>{counter}</h1>
+    </div>
+  );
 }
 
 export default App;
