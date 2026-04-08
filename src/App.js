@@ -15,13 +15,8 @@ function App() {
   const reset = () => setCounter(0);
 
   const decrease = () => {
-    if (counter === 0) {
-      setCounter(0);
-    } else {
-      setCounter(counter - 1);
-    }
+    setCounter((counter) => Math.max(0, counter - 1));
   };
-
   return (
     <div className="App">
       <button onClick={increase}>+</button>
